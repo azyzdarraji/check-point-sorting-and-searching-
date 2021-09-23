@@ -1,0 +1,19 @@
+ALGORITHM insertsorting 
+VAR
+    Tab: ARRAY_OF INTEGER[100];
+    i ,j variable_auxiliaire : INTEGER ;
+    
+BEGIN
+   FOR i FROM 1 TO tab.length -1  STEP 1  DO
+       variable_auxiliaire := tab [i] ; 
+       j:= i-1
+
+       WHILE ( j > 0 and tab[i] > variable_auxiliaire ) DO
+       {
+           tab [j+1] := tab[j] ;
+        }
+           
+       END_WHILE
+       tab [j+1]:= variable_auxiliaire ;
+   END_FOR
+END
